@@ -29,6 +29,11 @@ body img {
     max-width: 100%;
 }
 
+.banner-img {
+    max-width: 15%;
+    min-height: 6%;
+}
+
 a:hover {
     text-decoration: none;
 }
@@ -76,7 +81,7 @@ ul {
 
 a.navbar-brand {
     font-size: .75em;
-    color: #ffc905;
+    color: rgb(247, 169, 94);
     padding: 0;
     font-weight: 600;
     margin: 0;
@@ -95,9 +100,9 @@ a.navbar-brand {
     margin: 0 13em;
 }
 .banner-text a {
-  background-color: #ffc905;
-    border-color: #ffc905;
-    color: #000;
+  background-color: rgb(247, 169, 94);
+    border-color: rgb(247, 169, 94);
+    color: rgb(247, 169, 94);
     padding: 0.8em 2em;
     border-radius: 4px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.15);
@@ -402,7 +407,7 @@ h4.agile-title,h1.agile-title,h2.agile-title {
 /* header */
 /* CSS Document */
 header {
-    position: absolute;
+    position: unset;
     z-index: 9;
     width: 100%;
     padding: 1rem 0;
@@ -577,6 +582,9 @@ li > a:only-child:after { content: ''; }
 		text-align: center;
 	}
 
+    /* Hide Dropdown when clicked on menuitem */
+
+
 	/* Change menu item's width to 100% */
 	nav ul li {
 		display: block;
@@ -676,25 +684,19 @@ h3.heading {
 }
 /*-- inner page banner --*/
 .inner-page-banner {
-    background: url(../images/ban1.jpg) no-repeat;
+    background: rgb(247, 169, 94);
     background-size: cover;
-    min-height: 300px;
+    height: fit-content;
     position: relative;
-}
-.inner-page-banner:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.4;
-    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+
 .title-desc a.btn {
-       background-color: #ffc905;
-    border-color: #ffc905;
+       background-color: rgb(247, 169, 94);
+    border-color: rgb(247, 169, 94);
     color: #000;
     padding: 0.8em 2em;
     border-radius: 4px;
@@ -719,7 +721,7 @@ li.breadcrumb-item a {
 /*-- /about page-mid --*/
 
 .content-left-bottom h5 {
-    color: #ffc905;
+    color: rgb(247, 169, 94);
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
     font-size: 0.85em;
     text-transform: uppercase;
@@ -767,7 +769,7 @@ li.breadcrumb-item a {
 }
 span.fa.fa-arrow-circle-o-right {
     font-size: 1.5em;
-    color:#ffc905;
+    color:rgb(247, 169, 94);
 }
 /*-- //services --*/
 /*-- /services page --*/
@@ -818,7 +820,7 @@ span.fa.fa-arrow-circle-o-right {
 .number-wthree-info h5 {
   font-size: 43px;
   font-weight: 700;
-  color: #ffc905;
+  color: rgb(247, 169, 94);
 }
 
  .blog-date-grid ul li a, .w3layouts-team-grid h6 {
@@ -955,7 +957,7 @@ a.t-icon span {
 }
 .padding h3 {
     margin: 1em 0;
-    color: #ffc905;
+    color: rgb(247, 169, 94);
     font-weight: 400;
 }
 .border-dot {
@@ -994,7 +996,7 @@ h3.tittle.two span {
 
 h3.tittle.order {
     font-size: 1.6em;
-    color: #ffc905;
+    color: rgb(247, 169, 94);
     font-weight: 600;
 }
 
@@ -1012,8 +1014,8 @@ h4.tittle {
    
 }
 .read-more a {
-         background-color: #ffc905;
-    border-color: #ffc905;
+         background-color: rgb(247, 169, 94);
+    border-color: rgb(247, 169, 94);
     color: #000;
     padding: 0.8em 2em;
     border-radius: 4px;
@@ -1170,7 +1172,7 @@ a.w3pvt_google {
 }
 
 .btn.submit {
-    background:#ffc905;
+    background:rgb(247, 169, 94);
     -moz-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     -webkit-transition: all 0.25s ease;
@@ -1237,7 +1239,7 @@ subscribe form {
     letter-spacing: 1px;
 }
 .subscribe-left {
-	background: #ffc905;
+	background: rgb(247, 169, 94);
 }
 .subscribe-right {
     background: #f6f6f6;
@@ -1282,7 +1284,7 @@ hr {
     font-size: 1.2em;
     letter-spacing: 1px;
     font-weight: 600;
-    color: #ffc80a;
+    color: rgb(247, 169, 94);
 }
 
 /* footer grids */
