@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/745eae5c-33e7-4865-8649-ade54f8dbbe9/resourceGroups/timihajszalon/providers/Microsoft.Web/sites/timihajszalon",
+    "appService.deploySubpath": "build"
+}

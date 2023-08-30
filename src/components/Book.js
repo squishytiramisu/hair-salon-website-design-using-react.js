@@ -90,7 +90,7 @@ function Book() {
                   themeSystem='lux'
                   initialView="timeGridWeek"
                   editable={true}
-                  selectable={true}
+                  selectable={false}
                   selectMirror={true}
                   dayMaxEvents={true}
                   weekends={weekendsVisible}
