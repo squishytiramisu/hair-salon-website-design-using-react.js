@@ -4,11 +4,11 @@ import Home from './components/Home';
 import Navbar from './components/partial/Navbar';
 import Footer from './components/partial/Footer';
 import About from './components/About';
-import Services from './components/Services';
-import Single from './components/Single';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
-
+import Frizurak from './components/Friseur';
+import Message from './components/Message';
+import Book from './components/Book';
 
 function App() {
   return (
@@ -17,12 +17,12 @@ function App() {
       <Router>
         <Navbar/>
           <Switch>
-            <Route exact path='/'component={Home}/>
-            <Route path='/about' component={About}/>
-            <Route path='/services' component={Services}/>
-            <Route path='/single' component={Single}/>
-            <Route path='/gallery' component={Gallery}/>
-            <Route path='/contact' component={Contact}/>
+            <Route exact path='/'component={About}/>
+            <Route path='/galleria' component={Gallery}/>
+            <Route path='/frizurak' component={Frizurak}/>
+            <Route path='/uzenet' component={Message}/>
+            <Route path='/elerhetoseg' component={Contact}/>
+            <Route path='/idopontfoglalas' component={Book}/>
           </Switch>
         <Footer/>
       </Router>

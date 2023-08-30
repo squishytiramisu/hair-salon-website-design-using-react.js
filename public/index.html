@@ -10,6 +10,19 @@
   <script>
     addEventListener("load", function () {
       setTimeout(hideURLbar, 0);
+      var dropdownItems = document.querySelectorAll('nav > ul > li > a');
+    
+    // Add click event listener to each item
+    
+try {
+      dropdownItems.forEach(function(item) {
+          item.addEventListener('click', function() {
+              document.getElementById("drop").checked = false;
+          });
+      });
+} catch (error) {
+  
+}
     }, false);
 
     function hideURLbar() {
@@ -47,11 +60,11 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-  <title>React App</title>
+  <title>Timi Hajszalon</title>
 </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <noscript>Az oldal használatához JavaScript szükséges!</noscript>
   <div id="root"></div>
   <!--
       This HTML file is a template.

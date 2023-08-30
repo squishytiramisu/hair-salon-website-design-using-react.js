@@ -5,24 +5,25 @@ class Gallery extends Component{
         return(
             <div>
 
-<section class="inner-page-banner" id="home">
-</section>
+<div class="inner-page-banner" id="home">
+        <img src="assets/images/ban2.jpg" alt="" class="img-responsive banner-img" />
+</div>
 
 <div class="breadcrumb-agile">
 	<ol class="breadcrumb mb-0">
 		<li class="breadcrumb-item">
-        <Link to='/'>Home</Link>
+        <Link to='/'>Nyitólap</Link>
 		</li>
-		<li class="breadcrumb-item active" aria-current="page">Gallery</li>
+		<li class="breadcrumb-item active" aria-current="page">Galléria</li>
 	</ol>
 </div>
-    <section class="gallery py-5" id="gallery">
+    <section class="gallery py-1" id="gallery">
         <div class="container py-md-5">
-	<h3 class="heading text-center mb-3 mb-sm-5">Our Gallery</h3>
+	<h3 class="heading text-center mb-3 mb-sm-5">Galléria</h3>
             <div class="gallery-content">
                 <div class="row">
                     <div class="col-md-4 col-sm-6 gal-img">
-                        <a href="#gal1"><img src="assets/images/g1.jpg" alt="aegis" class="img-fluid mt-4" /></a>
+                        <a href="#gal1"><img src="assets/images/banner2.jpg" alt="aegis" class="img-fluid mt-4" /></a>
                     </div>
                     <div class="col-md-4 col-sm-6 gal-img">
                         <a href="#gal2"><img src="assets/images/g2.jpg" alt="aegis" class="img-fluid mt-4" /></a>

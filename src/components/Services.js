@@ -3,8 +3,9 @@ import React,{Component} from 'react';
      render(){
          return(
             <div>
-            <section class="inner-page-banner" id="home">
-            </section>
+<div class="inner-page-banner" id="home">
+        <img src="assets/images/ban2.jpg" alt="" class="img-responsive banner-img" />
+</div>
             
             
             
