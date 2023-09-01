@@ -20,7 +20,7 @@ class Contact extends Component{
                <h3 class="heading text-center mb-3 mb-sm-5">Elérhetőség</h3>
             <div class="row mt-4 justify-content-center">
 
-                <div class="col-md-3 test-grid text-left px-lg-4">
+                <div class="col-md-3 test-grid text-left ">
                     <div class="test-info">
 
                         <h3 class="mt-md-4 mt-2"> Helyszín</h3>
@@ -29,22 +29,32 @@ class Contact extends Component{
     
                     </div>
                 </div>
-                <div class="col-md-3 test-grid text-left px-lg-4">
+                <div class="col-md-3 test-grid text-left ">
                     <div class="test-info">
 
                         <h3 class="mt-md-4 mt-2"> Kapcsolat</h3>
                         <p>Email: <a>vollertimi@gmail.com</a>
-                        <br/> Telefon: <a>+ 36 000 0000 </a>
+                        <br/> Telefon: <a>06 20 469 6306 </a>
                         </p>
 
     
                     </div>
                 </div>
-                <div class="col-md-3 test-grid text-left px-lg-4">
+                <div class="col-md-3 test-grid text-left ">
                     <div class="test-info">
 
                         <h3 class="mt-md-4 mt-2"> Nyitvatartás</h3>
-                        <p>Hétfő-Péntek: 10:00-17:00 <br/> Szombat-Vasárnap: Zárva</p>
+                                    <p> Hétfő:     11.00 - 20.00</p>
+
+                                    <p> Kedd:      08.00 - 16.00</p>
+ 
+                                    <p> Szerda:    11.00 - 20.00</p>
+  
+                                    <p> Csütörtök: 08.00 - 16.00</p>
+
+                                    <p> Péntek:    Változó</p>
+
+                                    <p>Szombat - Vasárnap: Zárva</p>
 
     
                     </div>

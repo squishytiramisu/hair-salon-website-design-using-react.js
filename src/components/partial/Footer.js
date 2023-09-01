@@ -20,12 +20,22 @@ class Footer extends Component{
                             <hr/>
                             <ul class="list-info-w3pvt last-w3ls-contact mt-lg-4">
                                 <li>
-                                    <p> Hétfő - Péntek: 08.00 - 16.00</p>
-
+                                    <p> Hétfő:     11.00 - 20.00</p>
                                 </li>
-                                <li class="my-2">
-                                    <p>Saturday - Vasárnap: Zárva</p>
-
+                                <li>
+                                    <p> Kedd:      08.00 - 16.00</p>
+                                </li>
+                                <li>
+                                    <p> Szerda:    11.00 - 20.00</p>
+                                </li>
+                                <li>
+                                    <p> Csütörtök: 08.00 - 16.00</p>
+                                </li>
+                                <li>
+                                    <p> Péntek:    Változó</p>
+                                </li>
+                                <li>
+                                    <p>Szombat - Vasárnap: Zárva</p>
                                 </li>
                             </ul>
                         </div>
@@ -40,7 +50,7 @@ class Footer extends Component{
                                 </p>
                             </div>
                             <div class="last-w3ls-contact my-2">
-                                <p>+ 36 000 0000</p>
+                                <p>06 20 469 6306</p>
                             </div>
                             <div class="last-w3ls-contact">
                                 <p>1165 Budapest,

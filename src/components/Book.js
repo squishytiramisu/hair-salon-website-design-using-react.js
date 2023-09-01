@@ -89,7 +89,6 @@ function Book() {
       <section className="banner-bottom py-1">
         <div className="container py-md-5">
           <h3 className="heading text-center mb-3 mb-sm-5">Foglalás</h3>
-          <Demo></Demo>
 
           <div className="single-w3pvt-page mt-md-5 mt-4 px-lg-5">
             <div className="demo-app">
