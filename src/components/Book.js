@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { formatDate } from '@fullcalendar/core';
 import FullCalendar from '@fullcalendar/react';
@@ -7,28 +7,46 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import huLocale from '@fullcalendar/core/locales/hu';
 import Api from '../service/api';
+import Demo from './FormDialog';
 
 
 const todayStr = new Date().toISOString().replace(/T.*$/, '');
 
 function Book() {
-  const [weekendsVisible, setWeekendsVisible] = useState(false);
   const [events, setEvents] = useState([]);
   const [businessHours, setBusinessHours] = useState(null);
 
 
-  useEffect(() => {
-    fetch('https://4f2b9e0d-4998-4c1d-992f-f5daf7f1878a.mock.pstmn.io/api/appointments')
-      .then(response => response.json())
-      .then(data => setEvents(data));
+  const childRef = useRef();
 
+  useEffect(() => {
       Api.getBusinessHours().then((response) => {
         setBusinessHours(response.data);
       });
+
+      Api.getEvents().then((response) => {
+        setEvents(response.data);
+      });
+
+      const element = childRef.current;
+      console.log(element);
+
   }, []);
 
-  const handleWeekendsToggle = () => {
-    setWeekendsVisible(!weekendsVisible);
+
+  const handleDateClicked = (e) => {
+
+    if(childRef.current !== null && childRef.current !== undefined){
+      childRef.current.openDialog();
+    }
+
+    console.log(e);
+    if(e==null || e == undefined || e.view == undefined || e.view.type == undefined || e.dateStr == undefined){
+      return;
+    }
+    if(e.view.type === 'dayGridMonth') {
+      e.view.calendar.changeView('timeGridWeek', e.dateStr);
+    }
   };
 
   const handleDateSelect = (selectInfo) => {
@@ -71,10 +89,11 @@ function Book() {
       <section className="banner-bottom py-1">
         <div className="container py-md-5">
           <h3 className="heading text-center mb-3 mb-sm-5">Foglalás</h3>
+          <Demo></Demo>
+
           <div className="single-w3pvt-page mt-md-5 mt-4 px-lg-5">
             <div className="demo-app">
               <div className="demo-app-main">
-
 
 
                 <FullCalendar
@@ -85,27 +104,32 @@ function Book() {
                     right: 'dayGridMonth,timeGridWeek,timeGridDay',
                   }}
                   businessHours={businessHours}
+                  slotMinTime="08:00:00"
+                  slotMaxTime="20:00:00"
                   timeZone='Europe/Budapest'
                   locale={huLocale}
                   themeSystem='lux'
-                  initialView="timeGridWeek"
-                  editable={true}
+                  initialView="dayGridMonth"
+                  editable={false}
                   selectable={false}
                   selectMirror={true}
                   dayMaxEvents={true}
-                  weekends={weekendsVisible}
+                  weekends={false}
+                  nowIndicator={true}
                   select={handleDateSelect}
                   eventContent={renderEventContent} // custom render function
                   eventClick={handleEventClick}
                   events={events}
+                  dateClick={(e) => handleDateClicked(e)}
    // called after events are initialized/added/changed/removed
                 />
-
+                
 
               </div>
             </div>
           </div>
         </div>
+
       </section>
     </div>
   );

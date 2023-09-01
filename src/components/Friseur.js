@@ -1,7 +1,14 @@
-import React,{Component} from 'react';
+import React,{Component, useState} from 'react';
 import {Link} from 'react-router-dom';
-class Friseur extends Component{
-    render(){
+import {Modal} from './DatePicker';
+
+import Demo from './FormDialog';
+
+
+const Friseur = () =>{
+    const [openModal, setOpenModal] = useState(false);
+
+
         return(
             <div>
 
@@ -26,11 +33,10 @@ class Friseur extends Component{
 
             </div>
         </div>
-
-
     </section>
+
     </div>
         )
     }
-}
+
 export default Friseur
