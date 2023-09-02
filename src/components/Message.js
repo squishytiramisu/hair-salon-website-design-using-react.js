@@ -1,7 +1,46 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
-class Contact extends Component{
-    render(){
+import Api from '../service/api';
+import Alert from '@material-ui/lab/Alert';
+
+function Contact(){
+
+    const [name, setName] = React.useState(null);
+    const [email, setEmail] = React.useState(null);
+    const [message, setMessage] = React.useState(null);
+
+    const [success, setSuccess] = React.useState(false);
+
+    const [unSuccess, setUnSuccess] = React.useState(false);
+
+    const sendMail = () => {
+        if(name == null || name == undefined || email == null || email == undefined || message == null || message == undefined){
+            return;
+        }
+
+        if(localStorage.getItem("ctr") == true && localStorage.getItem("lmd") == new Date().toISOString().split("T")[0]){
+            return;
+        }
+
+        if(localStorage.getItem("lmd") == new Date().toISOString().split("T")[0]){
+            localStorage.setItem("ctr",true);
+        }else{
+            localStorage.setItem("ctr",false);
+        }
+
+        Api.sendMail(name,email,message).then((response) => {
+            console.log(response);
+            setSuccess(true);
+
+        }).catch((error) => {
+            setUnSuccess(true);
+            console.log(error);
+        });
+
+        localStorage.setItem("lmd",new Date().toISOString().split("T")[0]);
+    }
+
+
         return(
 			<div>
 <div class="inner-page-banner" id="home">
@@ -27,22 +66,24 @@ class Contact extends Component{
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label>Név</label>
-                                <input class="form-control" type="text" name="Name" placeholder="" required="" />
+                                <input class="form-control" type="text" name="Name" placeholder="" required="" onChange={ (e) => setName(e.target.value) } />
                             </div>
                             <div class="form-group">
                                 <label>Email</label>
-                                <input class="form-control" type="email" name="Email" placeholder="" required="" />
+                                <input class="form-control" type="email" name="Email" placeholder="" required="" onChange={(e) => setEmail(e.target.value)} style={{textTransform:"unset"}}/>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label>Üzenet</label>
-                                <textarea class="form-control" name="Message" placeholder="" required=""></textarea>
+                                <textarea class="form-control" name="Message" placeholder="" required="" onChange={(e) => setMessage(e.target.value)}></textarea>
                             </div>
                         </div>
                         <div class="form-group mx-auto mt-3">
-                            <button type="submit" class="btn submit">Küldés</button>
+                        {success ? <Alert severity="success">Sikeresen elküldve!</Alert> : <button type="button" class="btn submit" onClick={sendMail}>Küldés</button> }
+                        {unSuccess && !success ? <Alert severity="error">Hiba történt!</Alert> : <div></div>}
                         </div>
+                        
                     </div>
 
 
@@ -56,11 +97,8 @@ class Contact extends Component{
         </div>
     </section>
 
-    <div class="map-w3layouts">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d700.5025184246496!2d19.190047728841922!3d47.516826803120914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741c4eca0c8fbb9%3A0x235d770e8c24b50b!2sMargit%20u.%20123!5e0!3m2!1shu!2shu!4v1693233524953!5m2!1shu!2shu" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
-   </div>
+
 	</div>
         )
     }
-}
 export default Contact

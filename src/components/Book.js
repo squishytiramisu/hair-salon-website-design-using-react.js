@@ -19,6 +19,10 @@ function Book() {
 
   const childRef = useRef();
 
+  const [dialogOpen, setDialogOpen] = useState(false);
+
+  const [date, setDate] = useState("");
+
   useEffect(() => {
       Api.getBusinessHours().then((response) => {
         setBusinessHours(response.data);
@@ -27,9 +31,6 @@ function Book() {
       Api.getEvents().then((response) => {
         setEvents(response.data);
       });
-
-      const element = childRef.current;
-      console.log(element);
 
   }, []);
 
@@ -46,6 +47,10 @@ function Book() {
     }
     if(e.view.type === 'dayGridMonth') {
       e.view.calendar.changeView('timeGridWeek', e.dateStr);
+    }
+    if(e.view.type === 'timeGridWeek') {
+      setDate(e.dateStr.split('T')[0]);
+      setDialogOpen(true);
     }
   };
 
@@ -67,11 +72,7 @@ function Book() {
   };
 
   const handleEventClick = (clickInfo) => {
-    if (window.confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
-      clickInfo.event.remove();
-    }
   };
-
 
   return (
     <div>
@@ -92,8 +93,8 @@ function Book() {
 
           <div className="single-w3pvt-page mt-md-5 mt-4 px-lg-5">
             <div className="demo-app">
+              <Demo open={dialogOpen} date={date}/>
               <div className="demo-app-main">
-
 
                 <FullCalendar
                   plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
@@ -120,7 +121,6 @@ function Book() {
                   eventClick={handleEventClick}
                   events={events}
                   dateClick={(e) => handleDateClicked(e)}
-   // called after events are initialized/added/changed/removed
                 />
                 
 
