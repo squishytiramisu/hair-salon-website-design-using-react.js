@@ -1,8 +1,8 @@
 
 import axios from 'axios';
 
-//const apiUrl = "https://timibookingapi20230903014847.azurewebsites.net"
-const apiUrl = "https://localhost:7222"
+const apiUrl = "https://timibookingapi20230903014847.azurewebsites.net"
+//const apiUrl = "https://localhost:7222"
 
 
 
