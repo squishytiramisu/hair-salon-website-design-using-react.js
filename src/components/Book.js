@@ -35,6 +35,12 @@ function Book() {
   }, []);
 
 
+const addedEvent = (newEvents) => {
+  var allEvent = events.concat(newEvents);
+  setEvents(allEvent);
+}
+
+
   const handleDateClicked = (e) => {
 
     if(childRef.current !== null && childRef.current !== undefined){
@@ -54,25 +60,11 @@ function Book() {
     }
   };
 
-  const handleDateSelect = (selectInfo) => {
-    const title = prompt('Please enter a new title for your event');
-    const calendarApi = selectInfo.view.calendar;
-
-    calendarApi.unselect(); // clear date selection
-
-    if (title) {
-      calendarApi.addEvent({
-        id: 3,
-        title,
-        start: selectInfo.startStr,
-        end: selectInfo.endStr,
-        allDay: selectInfo.allDay,
-      });
-    }
+  const handleEventClicked = (e) => {
+    e.view.calendar.changeView('timeGridWeek', e.event.startStr);
   };
 
-  const handleEventClick = (clickInfo) => {
-  };
+  
 
   return (
     <div>
@@ -91,9 +83,11 @@ function Book() {
         <div className="container py-md-5">
           <h3 className="heading text-center mb-3 mb-sm-5">Foglalás</h3>
 
+              <Demo open={dialogOpen} date={date} addedEvent={addedEvent}/>
           <div className="single-w3pvt-page mt-md-5 mt-4 px-lg-5">
             <div className="demo-app">
-              <Demo open={dialogOpen} date={date}/>
+
+
               <div className="demo-app-main">
 
                 <FullCalendar
@@ -101,24 +95,24 @@ function Book() {
                   headerToolbar={{
                     left: 'prev,next today',
                     center: 'title',
-                    right: 'dayGridMonth,timeGridWeek,timeGridDay',
+                    right: 'dayGridMonth,timeGridWeek',
                   }}
                   businessHours={businessHours}
                   slotMinTime="08:00:00"
                   slotMaxTime="20:00:00"
                   timeZone='Europe/Budapest'
                   locale={huLocale}
-                  themeSystem='lux'
+                  themeSystem='bootstrap'
                   initialView="dayGridMonth"
                   editable={false}
+                  allDaySlot={false}
                   selectable={false}
                   selectMirror={true}
                   dayMaxEvents={true}
                   weekends={false}
                   nowIndicator={true}
-                  select={handleDateSelect}
-                  eventContent={renderEventContent} // custom render function
-                  eventClick={handleEventClick}
+                  eventClick={(e) => handleEventClicked(e)}
+                  //eventContent={renderEventContent} // custom render function
                   events={events}
                   dateClick={(e) => handleDateClicked(e)}
                 />
@@ -139,8 +133,6 @@ export default Book;
 function renderEventContent(eventInfo) {
   return (
     <>
-      <b>{eventInfo.timeText}</b>
-      <i>{eventInfo.event.title}</i>
     </>
   );
 }

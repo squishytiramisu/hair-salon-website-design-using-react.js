@@ -47,6 +47,7 @@ export default function FormDialog(props) {
     }
     var duration = selectedService.split("(")[1].split(" ")[0];
     Api.addEvent(selectedDate,selectedService,selectedTime,duration,fullname,phone).then((response) => {
+      props.addedEvent(response.data);
       setOpen(false);
     }).catch((error) => {
       console.log(error);
@@ -97,7 +98,7 @@ const fillOptions = (date,duration) => {
 
   return (
     <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+      <Button variant="contained" color="primary" onClick={handleClickOpen}>
         Új foglalás
       </Button>
       <Dialog
