@@ -24,23 +24,12 @@ class About extends Component{
                 <div class="col-md-10 content-left-bottom entry-w3ls-info text-left">
                     <h4>Kedves (Leendő) Vendégeim!</h4>
                     <p class="mt-1 text-left">
-                    Szeretnék a megnyílt fodrász szalonomba betérő vendégeim számára egy kis kedvcsinálót kínálni a
-                    következő sorokkal.
-                    Valamiről alkotott benyomást nem lehet második alkalommal kieszközölni. Az üzleti találkozó, vagy üzleti
-                    fogadás, vagy egy szerelmi légyott első pillanatában kialakult véleményünk mélyen a tudatunkba
-                    beleágyazódik és ott él és formálja a másikról alkotott véleményünket. Ehhez hozzátartozik az ízléses
-                    öltözködés, a jól ápoltság , a jól megválasztott illat és az egyéniséghez passzoló frizura.
-                    Már fodrász tanuló koromban a szüleim nagy hangsúlyt fektettek arra, hogy nagyon jó fodrászoktatóhoz
-                    kerüljek. Ekkor volt szerencsém megismerni Köcskiné Jutkát. Ó megismertette velem a szakma apró
-                    fogásait, fortélyait. Később egyre inkább törekedtem arra, hogy a tudásomat professzionista szintre
-                    vigyem. Veszprémben évekig dolgoztam Pikler Tibor mesterfodrász útmutatása mellett.
-                    Ezután felkerültem Budapestre, ahol 7 éven keresztül az Árkád Üzletházban egy német érdekeltségű
-                    cégnél még tovább fejlesztettem szakmai tudásomat. Mindig az volt a vágyam, hogy a megszerzett
-                    tapasztalataimat egy szépen felszerelt üzletben megmutathassam. Most ez a vágyam teljesült. 2023.
-                    szept. 1-étől a Margit utca 123. alatt nyítottam egy kitűnően felszerelt, ám családias hangulatú üzletet.
-                    A ragyogó környezet, a szakmai kompetenciám és a már meglévő vendégköröm a garancia arra, hogy Ón
-                    megtalálja azt, amire vágyott.
-                    Örömömre szolgálna, hogy holnaptól Önöket is vendégeimként üdvözölhetném.
+                    Szeretnék a megnyílt fodrászszalonomba betérő vendégeim számára egy kis kedvcsinálót kínálni a következő sorokkal.
+                    Valamiről alkotott benyomást nem lehet második alkalommal kieszközölni. Az üzleti találkozó, vagy üzleti fogadás, vagy egy szerelmi légyott első pillanatában kialakult véleményünk mélyen a tudatunkba beágyazódik, és ott él és formálja a másikról alkotott véleményünket. Ehhez hozzátartozik az ízléses öltözködés, a jól ápolt megjelenés, a jól megválasztott illat és az egyéniséghez passzoló frizura.
+                    Már fodrásztanuló koromban a szüleim nagy hangsúlyt fektettek arra, hogy nagyon jó fodrászoktatóhoz kerüljek. Ekkor volt szerencsém megismerni Köcskiné Jutkát. Ő megismertette velem a szakma apró fogásait, fortélyait. Később egyre inkább törekedtem arra, hogy a tudásomat professzionális szintre vigyem. Veszprémben évekig dolgoztam Pikler Tibor mesterfodrász útmutatása mellett.
+                    Ezután felkerültem Budapestre, ahol 7 éven keresztül az Árkád Üzletházban, egy német érdekeltségű cégnél még tovább fejlesztettem szakmai tudásomat. Mindig az volt a vágyam, hogy a megszerzett tapasztalataimat egy szépen felszerelt üzletben megmutathassam. Most ez a vágyam teljesült. 2023. szept. 1-étől a Margit utca 123. alatt nyitottam egy kitűnően felszerelt, ám családias hangulatú üzletet.
+                    A ragyogó környezet, a szakmai kompetenciám és a már meglévő vendégköröm a garancia arra, hogy Ön megtalálja azt, amire vágyott.
+                    Örömömre szolgálna, ha holnaptól Önöket is vendégeimként üdvözölhetném.
                     <br/>
                     <br/>
                     A szépség szolgálatában: 
