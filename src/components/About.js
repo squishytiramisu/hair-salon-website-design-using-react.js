@@ -35,11 +35,7 @@ class About extends Component{
                     A szépség szolgálatában: 
                     <h5 class="mt-1">Völler Tímea</h5>
                     </p>
-                    
-
                 </div>
-
-
             </div>
         </div>
     </section>

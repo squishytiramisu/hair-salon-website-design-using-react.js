@@ -1,0 +1,17 @@
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-img {
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.image-container:hover .gallery-img {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
