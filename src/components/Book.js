@@ -111,10 +111,10 @@ const addedEvent = (newEvents) => {
                   dayMaxEvents={true}
                   weekends={false}
                   nowIndicator={true}
-                  eventClick={(e) => handleEventClicked(e)}
+                  //eventClick={(e) => handleEventClicked(e)}
                   //eventContent={renderEventContent} // custom render function
                   events={events}
-                  dateClick={(e) => handleDateClicked(e)}
+                  //dateClick={(e) => handleDateClicked(e)}
                 />
                 
 

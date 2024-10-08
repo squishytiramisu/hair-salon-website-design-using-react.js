@@ -98,9 +98,7 @@ const fillOptions = (date,duration) => {
 
   return (
     <div>
-      <Button variant="contained" color="primary" onClick={handleClickOpen}>
-        Új foglalás
-      </Button>
+
       <Dialog
         open={open}
         onClose={handleClose}
